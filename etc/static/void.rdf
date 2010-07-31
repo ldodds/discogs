@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dct="http://purl.org/dc/terms/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:void="http://rdfs.org/ns/void#">
+
+ <rdf:Description rdf:about="http://discogs.dataincubator.org/">
+  <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+  <dct:title>Discogs</dct:title>
+  <dct:description>Conversion of the Discogs data export into RDF. Includes artists, labels and releases.</dct:description>
+  
+  <dct:source rdf:resource="http://www.discogs.com"/>
+  <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2009-07-04</dct:issued>
+  
+  <dct:license rdf:resource="http://creativecommons.org/publicdomain/zero/1.0/"/>
+  <dct:rights>The Discogs dataset has already been placed into the public domain, and this dataset conversion is similarly explicitly placed into the 
+  Public Domain using the Creative Commons CC0 waiver.</dct:rights>
+  
+  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/josh-wink"/>  
+  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/quantic"/>
+  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/radiohead"/>
+  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/ice-cube"/>
+
+  
+  <void:uriRegexPattern>http://discogs.dataincubator.org/.+</void:uriRegexPattern>
+  <void:sparqlEndpoint rdf:resource="http://api.talis.com/stores/discogs/services/sparql"/>
+  <void:uriLookupEndpoint rdf:resource="http://api.talis.com/stores/discogs/meta?about="/>
+
+  <void:vocabulary rdf:resource="http://xmlns.com/foaf/0.1/"/>
+  <void:vocabulary rdf:resource="http://purl.org/ontology/mo/"/>
+  <void:vocabulary rdf:resource="http://purl.org/dc/terms/"/>
+  <void:vocabulary rdf:resource="http://www.w3.org/2002/07/owl#"/>
+  <void:vocabulary rdf:resource="http://rdfs.org/sioc/ns#"/>
+  <void:vocabulary rdf:resource="http://www.w3.org/2003/12/exif/ns#"/>
+  
+</rdf:Description>
+
+</rdf:RDF>

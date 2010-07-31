@@ -1,0 +1,4 @@
+<http://discogs.dataincubator.org/scheme/genres> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos#ConceptScheme> .
+<http://discogs.dataincubator.org/scheme/genres> <http://www.w3.org/2000/01/rdf-schema#label> "Genres" .
+<http://discogs.dataincubator.org/scheme/styles> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2008/05/skos#ConceptScheme> .
+<http://discogs.dataincubator.org/scheme/styles> <http://www.w3.org/2000/01/rdf-schema#label> "Styles" .

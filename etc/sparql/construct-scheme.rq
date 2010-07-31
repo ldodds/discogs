@@ -1,0 +1,8 @@
+#Create inverse links in SKOS hierarchy
+PREFIX skos: <http://www.w3.org/2008/05/skos#>
+CONSTRUCT {
+  ?scheme skos:hasTopConcept ?concept.
+}
+WHERE {
+  ?concept skos:inScheme ?scheme.
+}

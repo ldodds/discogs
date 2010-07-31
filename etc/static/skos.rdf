@@ -1,0 +1,23 @@
+<rdf:RDF     
+    xmlns:dc="http://purl.org/dc/terms/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:sioc="http://rdfs.org/sioc/ns#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"    
+    xmlns:exif="http://www.w3.org/2003/12/exif/ns#"        
+    xmlns:discogs="http://purl.org/net/schemas/discogs/"
+    xmlns:skos="http://www.w3.org/2008/05/skos#"
+    xmlns:time="http://purl.org/NET/c4dm/timeline.owl"        
+    xmlns:mo="http://purl.org/ontology/mo/">
+
+ <skos:ConceptScheme rdf:about="http://discogs.dataincubator.org/scheme/genres">
+   <rdfs:label>Genres</rdfs:label>
+ </skos:ConceptScheme>
+
+ <skos:ConceptScheme rdf:about="http://discogs.dataincubator.org/scheme/styles">
+   <rdfs:label>Styles</rdfs:label>
+ </skos:ConceptScheme>
+
+</rdf:RDF>    
