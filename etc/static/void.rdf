@@ -6,7 +6,7 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:void="http://rdfs.org/ns/void#">
 
- <rdf:Description rdf:about="http://discogs.dataincubator.org/">
+ <rdf:Description rdf:about="http://data.kasabi.com/dataset/discogs/">
   <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
   <dct:title>Discogs</dct:title>
   <dct:description>Conversion of the Discogs data export into RDF. Includes artists, labels and releases.</dct:description>
@@ -18,13 +18,13 @@
   <dct:rights>The Discogs dataset has already been placed into the public domain, and this dataset conversion is similarly explicitly placed into the 
   Public Domain using the Creative Commons CC0 waiver.</dct:rights>
   
-  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/josh-wink"/>  
-  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/quantic"/>
-  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/radiohead"/>
-  <void:exampleResource rdf:resource="http://discogs.dataincubator.org/artist/ice-cube"/>
+  <void:exampleResource rdf:resource="http://data.kasabi.com/dataset/discogs/artist/josh-wink"/>  
+  <void:exampleResource rdf:resource="http://data.kasabi.com/dataset/discogs/artist/quantic"/>
+  <void:exampleResource rdf:resource="http://data.kasabi.com/dataset/discogs/artist/radiohead"/>
+  <void:exampleResource rdf:resource="http://data.kasabi.com/dataset/discogs/artist/ice-cube"/>
 
   
-  <void:uriRegexPattern>http://discogs.dataincubator.org/.+</void:uriRegexPattern>
+  <void:uriRegexPattern>http://data.kasabi.com/dataset/discogs/.+</void:uriRegexPattern>
   <void:sparqlEndpoint rdf:resource="http://api.talis.com/stores/discogs/services/sparql"/>
   <void:uriLookupEndpoint rdf:resource="http://api.talis.com/stores/discogs/meta?about="/>
 

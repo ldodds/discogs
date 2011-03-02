@@ -94,7 +94,7 @@ module Util
     if path.start_with?("http")
       return path
     end  
-    return "http://discogs.dataincubator.org#{path}"
+    return "http://data.kasabi.com/dataset/discogs#{path}"
   end
       
 end

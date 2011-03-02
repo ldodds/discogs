@@ -71,6 +71,7 @@ class Track
         
     @artists.each do |artist|
       statements << RDF::Statement.new( uri, Vocabulary::FOAF.maker, RDF::URI.new( artist ) )
+      statements << RDF::Statement.new( RDF::URI.new( artist ), Vocabulary::FOAF.made, uri )
     end
     
     return statements

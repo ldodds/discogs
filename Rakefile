@@ -12,14 +12,8 @@ DISCOGS_DATA_DIR="#{DISCOGS_DIR}/data"
 
 STATIC_DATA_DIR="etc/static"
 
-#USER="ldodds"
-#PASS="xxx"
-#STORENAME="http://api.talis.com/stores/discogs"
-
 CLEAN.include ["#{DISCOGS_DATA_DIR}/*.nt", "#{DISCOGS_DATA_DIR}/*.ok", "#{DISCOGS_DATA_DIR}/*.fail", 
                "#{STATIC_DATA_DIR}/*.ok", "#{STATIC_DATA_DIR}/*.fail"]
-
-#STORE = Pho::Store.new(STORENAME, USER, PASS)
 
 Rake::TestTask.new do |test|
   test.test_files = FileList['tests/tc_*.rb']
@@ -65,33 +59,17 @@ end
 
 task :convert => [:convert_artists, :convert_labels, :convert_releases]
 
-#task :upload_static do
-#  collection = Pho::RDFCollection.new(STORE, STATIC_DATA_DIR)
-#  puts "Uploading static data"
-#  collection.store()
-#  puts collection.summary()
-#end
-#
-#task :upload_data do
-#  collection = Pho::RDFCollection.new(STORE, DISCOGS_DATA_DIR)
-#  puts "Uploading"
-#  collection.store()
-#  puts collection.summary()
-#end
-#
-##Run SPARQL construct queries from etc/sparql to add in extra data
-#task :infer do
-#  
-#  Dir.glob("etc/sparql/construct*.rq").each do |file|
-#    print "Executing #{file}..."
-#    query = File.new(file).read()
-#    resp = Pho::Enrichment::StoreEnricher.infer(STORE, query)
-#    puts resp.status
-#  end
-#    
-#end
+#Convert to ntriples  
+task :ntriples do
+  Dir.glob("#{STATIC_DATA_DIR}/*.rdf").each do |src|
+    sh %{rapper -o ntriples #{src} >data/#{File.basename(src, ".rdf")}.nt}
+  end
+  FileUtils.cp("#{STATIC_DATA_DIR}/bbc-links.nt", "data/bbc-links.nt")
+end
 
-#task :publish => [:convert, :upload_static, :upload_data, :infer]
+task :package do
+  sh %{gzip data/*} 
+end
 
 #task :enrich_bbc_myspace do
 #   discogs = Pho::Sparql::SparqlClient.new("http://api.talis.com/stores/bbc-backstage/services/sparql")
